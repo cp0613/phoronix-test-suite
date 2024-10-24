@@ -4,8 +4,8 @@ tar -xf rocksdb-6.22.1.tar.gz
 cd rocksdb-6.22.1/
 mkdir build
 cd build
-export CFLAGS="-O3 -march=native"
-export CXXFLAGS="-O3 -march=native"
+export CFLAGS="-O3"
+export CXXFLAGS="-O3"
 cmake -DCMAKE_BUILD_TYPE=Release -DWITH_SNAPPY=ON  ..
 make -j $NUM_CPU_CORES
 make db_bench
@@ -16,8 +16,8 @@ then
 	# Unfortunately older GCC will emit error from these no-error 
 	echo "TRYING AGAIN WITH NO-ERROR BITS"
 	rm -rf ~/rocksdb-6.22.1/build/*
-	export CFLAGS="-O3 -march=native -Wno-error=deprecated-copy -Wno-error=pessimizing-move"
-	export CXXFLAGS="-O3 -march=native -Wno-error=deprecated-copy -Wno-error=pessimizing-move"
+	export CFLAGS="-O3 -Wno-error=deprecated-copy -Wno-error=pessimizing-move"
+	export CXXFLAGS="-O3 -Wno-error=deprecated-copy -Wno-error=pessimizing-move"
 	cmake -DCMAKE_BUILD_TYPE=Release -DWITH_SNAPPY=ON ..
 	make -j $NUM_CPU_CORES
 	make db_bench

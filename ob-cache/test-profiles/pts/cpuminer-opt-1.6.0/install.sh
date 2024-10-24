@@ -2,7 +2,7 @@
 tar -xf cpuminer-opt-3.20.3.tar.gz
 cd cpuminer-opt-3.20.3
 ./autogen.sh 
-CFLAGS="-O3 -march=native $CFLAGS" ./configure --without-curl
+CFLAGS="-O3 $CFLAGS" ./configure --without-curl
 if [ $OS_TYPE = "BSD" ]
 then
 	gmake -j $NUM_CPU_CORES

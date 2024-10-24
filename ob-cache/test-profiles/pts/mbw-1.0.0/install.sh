@@ -3,7 +3,7 @@
 tar -xf mbw-20180908.tar.xz
 cd mbw
 
-CFLAGS="-O3 -march=native $CFLAGS"
+CFLAGS="-O3 $CFLAGS"
 cc $CFLAGS -o mbw mbw.c
 echo $? > ~/install-exit-status
 cd ~

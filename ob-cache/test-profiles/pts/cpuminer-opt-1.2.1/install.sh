@@ -3,7 +3,7 @@
 unzip -o cpuminer-opt-3.8.8.1.zip
 cd cpuminer-opt-3.8.8.1
 ./autogen.sh 
-CFLAGS="-O3 -march=native $CFLAGS" ./configure --without-curl
+CFLAGS="-O3 $CFLAGS" ./configure --without-curl
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 

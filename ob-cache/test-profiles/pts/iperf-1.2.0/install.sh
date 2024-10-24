@@ -4,7 +4,7 @@ tar -zxvf iperf-3.14.tar.gz
 cd iperf-3.14/
 if [ "X$CFLAGS_OVERRIDE" = "X" ]
 then
-          CFLAGS="$CFLAGS -O3 -march=native"
+          CFLAGS="$CFLAGS -O3"
 else
           CFLAGS="$CFLAGS_OVERRIDE"
 fi

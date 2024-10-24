@@ -6,8 +6,8 @@ cd Stockfish-sf_15/src/
 if [ $OS_ARCH = "x86_64" ]
 then
 	# find the CPU architecture
-	gcc_enabled=$(c++ -Q -march=native --help=target | grep "\[enabled\]")
-	gcc_arch=$(c++ -Q -march=native --help=target | grep "march")
+	gcc_enabled=$(c++ -Q --help=target | grep "\[enabled\]")
+	gcc_arch=$(c++ -Q --help=target | grep "march")
 
 	if [[ "${gcc_enabled}" =~ "-mavx512vnni " && "${gcc_enabled}" =~ "-mavx512dq " && "${gcc_enabled}" =~ "-mavx512f " && "${gcc_enabled}" =~ "-mavx512bw " && "${gcc_enabled}" =~ "-mavx512vl " ]] ; then
 	  ARCH="x86-64-vnni256"

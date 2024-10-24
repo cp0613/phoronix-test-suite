@@ -2,8 +2,8 @@
 
 tar -zxvf john-1.9.0-jumbo-1.tar.gz
 cd john-1.9.0-jumbo-1/src/
-CFLAGS="-O3 -march=native $CFLAGS -std=gnu89" ./configure --disable-native-tests --disable-opencl
-CFLAGS="-O3 -march=native $CFLAGS -std=gnu89" make -j $NUM_CPU_CORES
+CFLAGS="-O3 $CFLAGS -std=gnu89" ./configure --disable-native-tests --disable-opencl
+CFLAGS="-O3 $CFLAGS -std=gnu89" make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 
 cd ~/

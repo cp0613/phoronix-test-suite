@@ -7,7 +7,7 @@ cd stargate-release-21.10.9/src
 
 pip3 install --user -r requirements.txt
 
-PLAT_FLAGS='-O3 -march=native' make -j $NUM_CPU_CORES
+PLAT_FLAGS='-O3' make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 
 cd ~

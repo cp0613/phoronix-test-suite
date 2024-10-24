@@ -2,7 +2,7 @@
 
 tar -xf 7z2201-src.tar.xz
 cd CPP/7zip/Bundles/Alone2
-CFLAGS="-O3 -march=native -Wno-error $CFLAGS" make -j $NUM_CPU_CORES -f makefile.gcc
+CFLAGS="-O3 -Wno-error $CFLAGS" make -j $NUM_CPU_CORES -f makefile.gcc
 echo $? > ~/install-exit-status
 cd ~
 echo "#!/bin/sh

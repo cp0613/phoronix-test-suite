@@ -5,7 +5,7 @@ cd unix
 
 if [ "C$CFLAGS" = "C" ]
 then
-	CFLAGS="-O3 -march=native"
+	CFLAGS="-O3"
 fi
 
 cc $CFLAGS hint.c hkernel.c -Dunix -DDOUBLE -DIINT -o DOUBLE -lm

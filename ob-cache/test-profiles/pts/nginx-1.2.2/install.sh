@@ -39,7 +39,7 @@ echo "
 
 patch -p0 < REMOVE-WORKAROUND.patch
 
-CFLAGS="-Wno-error -O3 -march=native $CFLAGS" CXXFLAGS="-Wno-error -O3 -march=native $CFLAGS" ./configure --prefix=$HOME/nginx_ --without-http_rewrite_module --without-http-cache 
+CFLAGS="-Wno-error -O3 $CFLAGS" CXXFLAGS="-Wno-error -O3 $CFLAGS" ./configure --prefix=$HOME/nginx_ --without-http_rewrite_module --without-http-cache 
 make -j $NUM_CPU_JOBS
 echo $? > ~/install-exit-status
 make install

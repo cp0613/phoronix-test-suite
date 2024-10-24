@@ -6,7 +6,7 @@ cd m-queens-1.1/
 
 if [ "X$CFLAGS_OVERRIDE" = "X" ]
 then
-          CFLAGS="$CFLAGS -O2 -march=native"
+          CFLAGS="$CFLAGS -O2"
 else
           CFLAGS="$CFLAGS_OVERRIDE"
 fi

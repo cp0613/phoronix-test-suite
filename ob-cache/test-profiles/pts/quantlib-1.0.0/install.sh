@@ -2,7 +2,7 @@
 
 tar -xf QuantLib-1.21.tar.gz
 cd QuantLib-1.21/build
-cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-O3 -march=native" -DCMAKE_C_FLAGS="-O3 -march=native"
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-O3" -DCMAKE_C_FLAGS="-O3"
 
 if [ $OS_TYPE = "BSD" ]
 then

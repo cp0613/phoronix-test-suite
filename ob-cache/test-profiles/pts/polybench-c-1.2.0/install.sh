@@ -5,7 +5,7 @@ tar -zxvf polybench-c-4.2.tar.gz
 
 if [ "X$CFLAGS_OVERRIDE" = "X" ]
 then
-          CFLAGS="$CFLAGS -O3 -march=native"
+          CFLAGS="$CFLAGS -O3"
 else
           CFLAGS="$CFLAGS_OVERRIDE"
 fi

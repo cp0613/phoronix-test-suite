@@ -3,8 +3,8 @@ rm -rf onnxruntime
 git clone https://github.com/microsoft/onnxruntime
 cd onnxruntime
 git checkout v1.17.0
-export CFLAGS="-O3 -march=native $CFLAGS -Wno-error=overloaded-virtual"
-export CXXFLAGS="-O3 -march=native $CXXFLAGS -Wno-error=overloaded-virtual"
+export CFLAGS="-O3 $CFLAGS -Wno-error=overloaded-virtual"
+export CXXFLAGS="-O3 $CXXFLAGS -Wno-error=overloaded-virtual"
 ./build.sh --config Release --build_shared_lib --parallel --skip_tests --enable_lto --cmake_extra_defines onnxruntime_BUILD_FOR_NATIVE_MACHINE=ON
 echo $? > ~/install-exit-status
 cd ~

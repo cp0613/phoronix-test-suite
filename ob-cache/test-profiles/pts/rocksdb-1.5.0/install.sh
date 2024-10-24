@@ -3,8 +3,8 @@ tar -xf rocksdb-8.0.0.tar.gz
 cd rocksdb-8.0.0
 mkdir build
 cd build
-export CFLAGS="-O3 -march=native -Wno-error=maybe-uninitialized -Wno-error=uninitialized -Wno-error=deprecated-copy -Wno-error=pessimizing-move $CFLAGS"
-export CXXFLAGS="-O3 -march=native -Wno-error=maybe-uninitialized -Wno-error=uninitialized -Wno-error=deprecated-copy -Wno-error=pessimizing-move $CXXFLAGS"
+export CFLAGS="-O3 -Wno-error=maybe-uninitialized -Wno-error=uninitialized -Wno-error=deprecated-copy -Wno-error=pessimizing-move $CFLAGS"
+export CXXFLAGS="-O3 -Wno-error=maybe-uninitialized -Wno-error=uninitialized -Wno-error=deprecated-copy -Wno-error=pessimizing-move $CXXFLAGS"
 cmake -DCMAKE_BUILD_TYPE=Release -DWITH_SNAPPY=ON  ..
 make -j $NUM_CPU_CORES
 make db_bench

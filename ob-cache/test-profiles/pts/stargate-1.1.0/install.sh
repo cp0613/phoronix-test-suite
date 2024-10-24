@@ -4,7 +4,7 @@ unzip -o stargate-benchmark-project-1.zip
 cd stargate-release-22.11.5/src
 pip3 install --user -r requirements.txt
 
-PLAT_FLAGS='-O3 -march=native' make -j $NUM_CPU_CORES
+PLAT_FLAGS='-O3' make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 cd ~
 echo "#!/bin/bash

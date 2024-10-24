@@ -71,7 +71,7 @@ diff -Naur src.orig/Parameters.hh src/Parameters.hh
 
 EOF
 cd src
-CXX=c++ CXXFLAGS="-DHAVE_OPENMP -fopenmp -O3 -march=native" make -j $NUM_CPU_CORES
+CXX=c++ CXXFLAGS="-DHAVE_OPENMP -fopenmp -O3" make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 cd ~
 echo "#!/bin/sh

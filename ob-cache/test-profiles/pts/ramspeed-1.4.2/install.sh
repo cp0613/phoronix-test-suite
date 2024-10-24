@@ -3,7 +3,7 @@
 tar -zxvf ramsmp-3.5.0.tar.gz
 
 cd ramsmp-3.5.0/
-export CFLAGS="-O3 -march=native $CFLAGS"
+export CFLAGS="-O3 $CFLAGS"
 cc $CFLAGS -o ramsmp fltmark.c fltmem.c intmark.c intmem.c ramsmp.c
 echo $? > ~/install-exit-status
 cd ~

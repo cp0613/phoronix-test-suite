@@ -5,10 +5,10 @@ cd JuliaGPU-v1.2pts/
 
 case $OS_TYPE in
 	"MacOSX")
-		CCFLAGS="-O3 -march=native -ftree-vectorize -funroll-loops -Wall -framework OpenCL -framework OpenGL -framework GLUT"
+		CCFLAGS="-O3 -ftree-vectorize -funroll-loops -Wall -framework OpenCL -framework OpenGL -framework GLUT"
 	;;
 	*)
-		CCFLAGS="-O3 -march=native -ftree-vectorize -funroll-loops -Wall -lglut -lglut -lOpenCL -lGL"
+		CCFLAGS="-O3 -ftree-vectorize -funroll-loops -Wall -lglut -lglut -lOpenCL -lGL"
 	;;
 esac
 

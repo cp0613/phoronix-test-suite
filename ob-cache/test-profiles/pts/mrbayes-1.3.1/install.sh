@@ -7,7 +7,7 @@ sed -i -e "s/MPI ?= no/MPI ?= yes/g" Makefile
 SSE=$(grep sse /proc/cpuinfo)
 if [ ! "$SSE" = "" ]
  then
-	sed -i -e "s/OPTFLAGS ?= -O3/OPTFLAGS ?= -O3 -msse -mfpmath=sse -march=native/g" Makefile
+	sed -i -e "s/OPTFLAGS ?= -O3/OPTFLAGS ?= -O3 -msse -mfpmath=sse/g" Makefile
 fi
 #kludge to remove readline dependency. I don't think it affects the speed, so it can probably stay.
 sed -i -e "s/USEREADLINE ?= yes/USEREADLINE ?= no/g" Makefile
